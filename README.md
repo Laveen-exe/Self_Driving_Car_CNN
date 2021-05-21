@@ -19,4 +19,4 @@ Trained the model with same architecture with grayscale images.
 
 
 **Graph of LOSS vs Number of Epochs.**
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/tree/main/Images/Loss_for_grayscale_images.png)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/tree/main/Images/Loss_for_grayscale_images.PNG)
