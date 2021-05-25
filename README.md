@@ -12,14 +12,22 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
+- - - -
+
 
 
 
 
 ## Model Architecture ##
+- - - -
+
+
 
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/cnn-architecture-624x890.png)
 **The Validation Loss is less than the Training Loss which ia an unusual case, this is because the model is trained on the hard features and the model parameters are validated on rather easy environment (without data augmentation on the images - adding random shadows).
+
+
+- - - -
 
 
 
