@@ -253,7 +253,7 @@ The Canny edge detection algorithm is composed of 5 steps:
 
 - - - - 
 
-##Conclusion##
+## Conclusion ##
 
 
 
