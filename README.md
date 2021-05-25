@@ -122,6 +122,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
         torch.nn.Linear(in_features = 50,out_features = 10,bias = True),
         torch.nn.ELU(),
         torch.nn.Linear(in_features = 10,out_features = 1,bias = True)
+        )
 ```
 
 
