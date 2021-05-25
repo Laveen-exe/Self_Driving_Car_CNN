@@ -21,7 +21,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
     Did image resizing and cropping, converted RGB image to YUV
-    Performed random flipping and translation to the iamges for better training.
+    Performed random flipping and translation to the images for better training.
     
     
     
