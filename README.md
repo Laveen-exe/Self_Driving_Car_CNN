@@ -22,15 +22,22 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
+
+
+
+
+
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/cnn-architecture-624x890.png)
-**The Validation Loss is less than the Training Loss which ia an unusual case, this is because the model is trained on the hard features and the model parameters are validated on rather easy environment (without data augmentation on the images - adding random shadows).
 
 
 
 
-`code()`
 
-    Markup :  `code()`
+
+
+
+
+
 
 ```python
      model = torch.nn.Sequential(
@@ -57,10 +64,49 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-**Graph of LOSS vs Number of Epochs.**
+
+
+
+
+## Loss vs Epoch ##
+
+
+
+
+
+
+**Graph of LOSS vs Number of Epochs : Method 1 : Trained the model using RGB images with 15k images, training time : 45 minutes**
+
+
+
+
+**The Validation Loss is less than the Training Loss which ia an unusual case, this is because the model is trained on the hard features and the model parameters are validated on rather easy environment (without data augmentation on the images - adding random shadows).
+
+
+
+
+
+
+
+
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Loss.png)
 
 
+
+**Running the model**
+
+
+    Using socketio ran the model drive.py 
+    pip install python-engineio==3.13.2
+    pip install python-socketio==4.6.1
+
+
+
+
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Simulator.gif)
+
+
+**Video Showing Udacity Simualator Autonomous mode**
 
 
 *UPDATE .v1*
