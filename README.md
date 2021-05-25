@@ -7,7 +7,7 @@ Self Driving Car using Nvidia CNN Architecture. This is the CNN based network ma
 
 
 **Graph of LOSS vs Number of Epochs.**
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Images/Loss.png)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Loss.png)
 
 
 
@@ -21,7 +21,11 @@ Trained the model with same architecture with grayscale images.
 
 
 **Graph of LOSS vs Number of Epochs.**
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Images/Loss_for_grayscale_images.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Loss_for_grayscale_images.PNG)
 
 
 
+
+
+**Video Showing Udacity Simualator Autonomous mode**
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Simulator.gif)
