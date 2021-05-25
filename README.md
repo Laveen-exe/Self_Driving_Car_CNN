@@ -15,6 +15,64 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
+## Image Augmentation ##
+
+
+
+
+    Did image resizing and cropping, converted RGB image to YUV
+    Performed random flipping and translation to the iamges for better training.
+    
+    
+    
+    
+    
+```python
+    def crop(image):
+    """
+    Crop the image (removing the sky at the top and the car front at the bottom)
+    """
+    return image[60:-25, :, :] # remove the sky and the car front
+
+
+    def resize(image):
+    """
+    Resize the image to the input shape used by the network model
+    """
+    return cv2.resize(image, (IMAGE_WIDTH, IMAGE_HEIGHT), cv2.INTER_AREA)
+
+
+    def rgb2yuv(image):
+    """
+    Convert the image from RGB to YUV (This is what the NVIDIA model does)
+    """
+    return cv2.cvtColor(image, cv2.COLOR_RGB2YUV)
+    
+    
+   def random_flip(image, steering_angle):
+    """
+    Randomly flipt the image left <-> right, and adjust the steering angle.
+    """
+    if np.random.rand() < 0.5:
+        image = cv2.flip(image, 1)
+        steering_angle = -steering_angle
+    return image, steering_angle
+
+
+    def random_translate(image, steering_angle, range_x, range_y):
+    """
+    Randomly shift the image virtially and horizontally (translation).
+    """
+    trans_x = range_x * (np.random.rand() - 0.5)
+    trans_y = range_y * (np.random.rand() - 0.5)
+    steering_angle += trans_x * 0.002
+    trans_m = np.float32([[1, 0, trans_x], [0, 1, trans_y]])
+    height, width = image.shape[:2]
+    image = cv2.warpAffine(image, trans_m, (width, height))
+    return image, steering_angle
+```
+
+
 
 
 
@@ -28,6 +86,10 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/cnn-architecture-624x890.png)
+
+
+
+
 
 
 
@@ -109,6 +171,10 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 **Video Showing Udacity Simualator Autonomous mode**
 
 
+
+
+
+
 *UPDATE .v1*
 Trained the model with same architecture with grayscale images.
 
@@ -122,8 +188,74 @@ Trained the model with same architecture with grayscale images.
 
 
 
-**Method 1 trained the model using RGB images**
 
 
-**Video Showing Udacity Simualator Autonomous mode**
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Simulator.gif)
+
+*UPDATE .v2*
+Using Image proocessing and edge detection algorithms, tried to find the edges through the path.
+
+
+
+
+
+
+### Image showing output of edge detection on the training images ###
+
+
+
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Various_edge_detectors.PNG)
+
+
+
+
+
+
+
+
+
+
+
+### Image showing output of Canny Edge Detector on the training images ###
+
+
+
+
+
+The Canny edge detection algorithm is composed of 5 steps:
+
+
+    1. Noise reduction;
+    2. Gradient calculation;
+    3. Non-maximum suppression;
+    4. Double threshold;
+    5. Edge Tracking by Hysteresis.
+    
+    
+    
+    
+    
+    
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Various_edge_detectors.PNG)
+
+
+
+
+
+### Image showing Pixel values vs number of pixels in the image ###
+
+
+
+
+
+
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Pixel_Values.PNG)
+
+- - - - 
+
+##Conclusion##
+
+
+
+    Can't use edge detection in this model because of lot of noise in the images.
+    Roads have some pattern or texture hence not able to remove the noise.
+
