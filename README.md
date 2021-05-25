@@ -193,7 +193,7 @@ Trained the model with same architecture with grayscale images.
 
 
 *UPDATE .v2*
-Using Image proocessing and edge detection algorithms, tried to find the edges through the path.
+Using Image processing and edge detection algorithms, tried to find the edges through the path.
 
 
 
