@@ -4,7 +4,9 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 - - - - 
 # Heading 1 #
 
-    Self Driving Car using Nvidia CNN Architecture. This is the CNN based network made for https://github.com/udacity/self-driving-car-sim simulator provided by Udacity. Used 15k image data to train the model. Did various Data Augmentation methods for better training.
+    Self Driving Car using Nvidia CNN Architecture.
+    This is the CNN based network made for https://github.com/udacity/self-driving-car-sim simulator provided by Udacity. 
+    Used 15k image data to train the model. Did various Data Augmentation methods for better training.
 
 
 
