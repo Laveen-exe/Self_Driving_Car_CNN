@@ -138,7 +138,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-**Graph of LOSS vs Number of Epochs : Method 1 : Trained the model using RGB images with 15k images, training time : 45 minutes**
+**Graph of LOSS vs Number of Epochs : Method 1 : Trained the model using RGB images with 15k images, Number of Epoch trained upon = 50 training time : 45 minutes**
 
 
 
@@ -177,7 +177,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 *UPDATE .v1*
-Trained the model with same architecture with grayscale images.
+Trained the model with same architecture with grayscale images. Number of Epoch trained upon = 30, training time = 30 minutes.
 
 
 
