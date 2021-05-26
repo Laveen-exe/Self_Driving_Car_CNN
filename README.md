@@ -134,7 +134,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Parmeters.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Parameters.PNG)
 
 
 
