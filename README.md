@@ -273,4 +273,14 @@ The Canny edge detection algorithm is composed of 5 steps:
 
     Can't use edge detection in this model because of lot of noise in the images.
     Roads have some pattern or texture hence not able to remove the noise.
+    
+    
+    
+## Introducing Dynamic Obstacles ##
+
+    first we tried adding some 8-9 objects at random positions, which moves randomly (used random function to generate some random points under some threshold for every 5ms gap).     It didn't work, the car was crashing with the obstacles. 
+    rather than 
+
+   ## tried to add obstacles on each side of the track ##
+    We collected points (around 35-40) on each side of the entire track (corresponding left and right points) with some distance between them and added cubes of size 3x3 then         allowed them to move on a straight path to the corresponding opposite point (if the object is at left side then it will move to right side of the track and other way). We         trained this model by switching on the obstacles when the obstacle is at some threshold distance form the car. We experimented with different  
 
