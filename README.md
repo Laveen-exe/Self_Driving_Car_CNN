@@ -74,7 +74,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-
+- - - - 
 
 ## Model Architecture ##
 
@@ -99,7 +99,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-
+- - - - 
 
 ```python
      model = torch.nn.Sequential(
@@ -126,7 +126,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 ```
 
 
-
+- - - - 
 ## Parameters of the model ##
 
 
@@ -143,7 +143,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-
+- - - - 
 
 ## Loss vs Epoch ##
 
@@ -169,7 +169,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss.png)
 
 
-
+- - - - 
 **Running the model**
 
 
@@ -182,7 +182,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Simulator.gif)
 
-
+- - - - 
 **Video Showing Udacity Simualator Autonomous mode**
 
 
@@ -197,7 +197,7 @@ Trained the model with same architecture with grayscale images. Number of Epoch 
 
 
 
-
+- - - - 
 **Graph of LOSS vs Number of Epochs.**
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss_for_grayscale_images.PNG)
 
@@ -213,7 +213,7 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-
+- - - - 
 ### Image showing output of edge detection on the training images ###
 
 
@@ -229,7 +229,7 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-
+- - - - 
 ### Image showing output of Canny Edge Detector on the training images ###
 
 
@@ -255,7 +255,7 @@ The Canny edge detection algorithm is composed of 5 steps:
 
 
 
-
+- - - - 
 ### Image showing Pixel values vs number of pixels in the image ###
 
 
@@ -303,13 +303,13 @@ The Canny edge detection algorithm is composed of 5 steps:
    Approach 1 is to add  8-9 dynamically moving objects at random positions, which moves randomly (used random function to generate some random points under some threshold for     
    every 5ms gap). It didn't work, the car was crashing with the obstacles. Rather than trying with different architectures we tried different approach.
    
-   ###PROS##
+   ###PROS###
    1. The car (moving agent) is able to avoid some of the obstacles while crashing into other, we were not sure about the overfitting whether it is actually avoiding or just is a 
    random chance of luck and it is moving on that path which we gathered during training.
    2. For testing this overfitting thing we tried to move the car (moving agent) on the reversed track. For our surprise it worked although not properly, it's still crashing but 
    it avoid some of the objects very smoothly.
    
-   ###CONS##
+   ###CONS###
    1. The car is crashing!!! maybe the data we collected is not enough, or the architecture is not good enough or the model is learning the position of the objects rather than the 
    ability to avoid them. So we tried Approach 2 to add more obstacles at fixec positions.
 
