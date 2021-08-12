@@ -73,7 +73,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 ```
 
 
-
+- - - - 
 
 
 ## Model Architecture ##
@@ -94,7 +94,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-
+- - - - 
 
 
 
@@ -125,7 +125,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
         )
 ```
 
-
+- - - - 
 
 ## Parameters of the model ##
 
@@ -143,7 +143,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-
+- - - - 
 
 ## Loss vs Epoch ##
 
@@ -168,7 +168,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss.png)
 
-
+- - - - 
 
 **Running the model**
 
@@ -182,14 +182,14 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Simulator.gif)
 
-
+- - - - 
 **Video Showing Udacity Simualator Autonomous mode**
 
 
 
 
 
-
+- - - - 
 *UPDATE .v1*
 Trained the model with same architecture with grayscale images. Number of Epoch trained upon = 30, training time = 30 minutes.
 
@@ -213,7 +213,7 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-
+- - - - 
 ### Image showing output of edge detection on the training images ###
 
 
@@ -229,7 +229,7 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-
+- - - - 
 ### Image showing output of Canny Edge Detector on the training images ###
 
 
@@ -255,7 +255,7 @@ The Canny edge detection algorithm is composed of 5 steps:
 
 
 
-
+- - - - 
 ### Image showing Pixel values vs number of pixels in the image ###
 
 
