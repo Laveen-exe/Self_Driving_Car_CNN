@@ -286,7 +286,7 @@ The Canny edge detection algorithm is composed of 5 steps:
     but it's not able to detect obstacles which are infront of the car. 
     
    ## Approach 3 ##
-    To solve above issue we added central camera which covers front part of the car and trained the model with input as 3 channels (gray scale images of left, right and central       images).
+    To solve above issue we added central camera which covers front part of the car and trained the model with input as 3 channels (gray scale images of left, right and central       images). 
     
    ## Approach 4 ##
    ( this approach is yet to implement )
