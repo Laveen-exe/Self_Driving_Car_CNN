@@ -293,9 +293,9 @@ The Canny edge detection algorithm is composed of 5 steps:
      <td>Central Camera View</td>
   </tr>
   <tr>
-    <td><img src="media_files/left_with_central_camera.PNG" width=250 height=400></td>
-    <td><img src="media_files/left_with_central_camera.PNG" width=250 height=400></td>
-    <td><img src="media_files/right_with_central_camera.PNG" width=250 height=400></td>
+    <td><img src="media_files/left_with_central_camera.PNG" width=350 height=400></td>
+    <td><img src="media_files/left_with_central_camera.PNG" width=350 height=400></td>
+    <td><img src="media_files/right_with_central_camera.PNG" width=350 height=400></td>
   </tr>
  </table>
 
