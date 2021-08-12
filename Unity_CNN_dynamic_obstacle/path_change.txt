@@ -1,0 +1,3 @@
+data = pd.read_csv("data_file.csv")
+data['Left'] = data['Left'].str.replace(r"C:/CarData/Screenshots/",'W:/Mathematical Computations/Projects/Unity CNN/Screenshots/',regex = True)
+data['Right'] = data['Right'].str.replace(r"C:/CarData/Screenshots/",'W:/Mathematical Computations/Projects/Unity CNN/Screenshots/',regex = True)
