@@ -73,7 +73,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 ```
 
 
-- - - - 
+
 
 
 ## Model Architecture ##
@@ -85,7 +85,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/cnn-architecture-624x890.png)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/cnn-architecture-624x890.png)
 
 
 
@@ -94,7 +94,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-- - - - 
+
 
 
 
@@ -125,7 +125,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
         )
 ```
 
-- - - - 
+
 
 ## Parameters of the model ##
 
@@ -134,7 +134,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Parameters.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Parameters.PNG)
 
 
 
@@ -143,7 +143,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-- - - - 
+
 
 ## Loss vs Epoch ##
 
@@ -166,9 +166,9 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss.png)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Loss.png)
 
-- - - - 
+
 
 **Running the model**
 
@@ -180,16 +180,16 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Simulator.gif)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Simulator.gif)
 
-- - - - 
+
 **Video Showing Udacity Simualator Autonomous mode**
 
 
 
 
 
-- - - - 
+
 *UPDATE .v1*
 Trained the model with same architecture with grayscale images. Number of Epoch trained upon = 30, training time = 30 minutes.
 
@@ -199,7 +199,7 @@ Trained the model with same architecture with grayscale images. Number of Epoch 
 
 
 **Graph of LOSS vs Number of Epochs.**
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss_for_grayscale_images.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Loss_for_grayscale_images.PNG)
 
 
 
@@ -213,12 +213,12 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-- - - - 
+
 ### Image showing output of edge detection on the training images ###
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Various_edge_detectors.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Various_edge_detectors.PNG)
 
 
 
@@ -229,7 +229,7 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-- - - - 
+
 ### Image showing output of Canny Edge Detector on the training images ###
 
 
@@ -250,12 +250,12 @@ The Canny edge detection algorithm is composed of 5 steps:
     
     
     
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Various_edge_detectors.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Various_edge_detectors.PNG)
 
 
 
 
-- - - - 
+
 ### Image showing Pixel values vs number of pixels in the image ###
 
 
@@ -263,7 +263,7 @@ The Canny edge detection algorithm is composed of 5 steps:
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Pixel_Values.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/Media/Pixel_Values.PNG)
 
 - - - - 
 
@@ -275,11 +275,43 @@ The Canny edge detection algorithm is composed of 5 steps:
     Roads have some pattern or texture hence not able to remove the noise.
     
     
+- - - - 
     
-## Introducing Dynamic Obstacles ##
+# Introducing Dynamic Obstacles #
+
+
+ ## Model Architecture ##
+    ![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/model_architecture_with_central_camera.PNG)
+    
+- - - -     
+   #### Camera Views
+
+    <table>
+      <tr>
+        <td>Left Camera View</td>
+         <td>Right Camera View</td>
+         <td>Central Camera View</td>
+      </tr>
+      <tr>
+        <td><img src="media_files/left_with_central_camera.PNG" width=270 height=480></td>
+        <td><img src="media_files/left_with_central_camera.PNG" width=270 height=480></td>
+        <td><img src="media_files/right_with_central_camera.PNG" width=270 height=480></td>
+      </tr>
+     </table>
+
    ## Approach 1 ##
-   first we tried adding some 8-9 objects at random positions, which moves randomly (used random function to generate some random points under some threshold for every 5ms gap).      It didn't work, the car was crashing with the obstacles. 
-   Rather than trying with different architectures we tried different approach.
+   Approach 1 is to add  8-9 dynamically moving objects at random positions, which moves randomly (used random function to generate some random points under some threshold for     
+   every 5ms gap). It didn't work, the car was crashing with the obstacles. Rather than trying with different architectures we tried different approach.
+   
+   ###PROS##
+   1. The car (moving agent) is able to avoid some of the obstacles while crashing into other, we were not sure about the overfitting whether it is actually avoiding or just is a 
+   random chance of luck and it is moving on that path which we gathered during training.
+   2. For testing this overfitting thing we tried to move the car (moving agent) on the reversed track. For our surprise it worked although not properly, it's still crashing but 
+   it avoid some of the objects very smoothly.
+   
+   ###CONS##
+   1. The car is crashing!!! maybe the data we collected is not enough, or the architecture is not good enough or the model is learning the position of the objects rather than the 
+   ability to avoid them. So we tried Approach 2 to add more obstacles at fixec positions.
 
    ## Approach 2 ##
    We collected points (around 35-40) on each side of the entire track (corresponding left and right points) with some distance between them and added cubes of size 3x3 then          allowed them to move on a straight path to the corresponding opposite point (if the object is at left side then it will move to right side of the track and other way). We          trained this model by switching on the obstacles when the obstacle is at some threshold distance form the car. We experimented with different with different architectures,
