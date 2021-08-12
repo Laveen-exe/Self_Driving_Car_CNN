@@ -278,15 +278,15 @@ The Canny edge detection algorithm is composed of 5 steps:
     
 ## Introducing Dynamic Obstacles ##
    ## Approach 1 ##
-    first we tried adding some 8-9 objects at random positions, which moves randomly (used random function to generate some random points under some threshold for every 5ms gap).     It didn't work, the car was crashing with the obstacles. 
-    Rather than trying with different architectures we tried different approach.
+   first we tried adding some 8-9 objects at random positions, which moves randomly (used random function to generate some random points under some threshold for every 5ms gap).      It didn't work, the car was crashing with the obstacles. 
+   Rather than trying with different architectures we tried different approach.
 
    ## Approach 2 ##
-    We collected points (around 35-40) on each side of the entire track (corresponding left and right points) with some distance between them and added cubes of size 3x3 then         allowed them to move on a straight path to the corresponding opposite point (if the object is at left side then it will move to right side of the track and other way). We         trained this model by switching on the obstacles when the obstacle is at some threshold distance form the car. We experimented with different with different architectures,
-    but it's not able to detect obstacles which are infront of the car. 
+   We collected points (around 35-40) on each side of the entire track (corresponding left and right points) with some distance between them and added cubes of size 3x3 then          allowed them to move on a straight path to the corresponding opposite point (if the object is at left side then it will move to right side of the track and other way). We          trained this model by switching on the obstacles when the obstacle is at some threshold distance form the car. We experimented with different with different architectures,
+   but it's not able to detect obstacles which are infront of the car. 
     
    ## Approach 3 ##
-    To solve above issue we added central camera which covers front part of the car and trained the model with input as 3 channels (gray scale images of left, right and central       images). 
+   To solve above issue we added central camera which covers front part of the car and trained the model with input as 3 channels (gray scale images of left, right and central        images). 
     
    ## Approach 4 ##
    ( this approach is yet to implement )
