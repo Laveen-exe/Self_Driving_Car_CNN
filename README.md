@@ -293,9 +293,9 @@ The Canny edge detection algorithm is composed of 5 steps:
      <td>Central Camera View</td>
   </tr>
   <tr>
-    <td><img src="media_files/left_with_central_camera.PNG" width=270 height=480></td>
-    <td><img src="media_files/left_with_central_camera.PNG" width=270 height=480></td>
-    <td><img src="media_files/right_with_central_camera.PNG" width=270 height=480></td>
+    <td><img src="media_files/left_with_central_camera.PNG" width=350 height=350></td>
+    <td><img src="media_files/left_with_central_camera.PNG" width=350 height=350></td>
+    <td><img src="media_files/right_with_central_camera.PNG" width=350 height=350></td>
   </tr>
  </table>
 
@@ -303,13 +303,13 @@ The Canny edge detection algorithm is composed of 5 steps:
    Approach 1 is to add  8-9 dynamically moving objects at random positions, which moves randomly (used random function to generate some random points under some threshold for     
    every 5ms gap). It didn't work, the car was crashing with the obstacles. Rather than trying with different architectures we tried different approach.
    
-   ###PROS###
+   **PROS**
    1. The car (moving agent) is able to avoid some of the obstacles while crashing into other, we were not sure about the overfitting whether it is actually avoiding or just is a 
    random chance of luck and it is moving on that path which we gathered during training.
    2. For testing this overfitting thing we tried to move the car (moving agent) on the reversed track. For our surprise it worked although not properly, it's still crashing but 
    it avoid some of the objects very smoothly.
    
-   ###CONS###
+  **CONS**
    1. The car is crashing!!! maybe the data we collected is not enough, or the architecture is not good enough or the model is learning the position of the objects rather than the 
    ability to avoid them. So we tried Approach 2 to add more obstacles at fixec positions.
 
