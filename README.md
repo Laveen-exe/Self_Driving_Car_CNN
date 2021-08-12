@@ -85,7 +85,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/cnn-architecture-624x890.png)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/cnn-architecture-624x890.png)
 
 
 
@@ -134,7 +134,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Parameters.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Parameters.PNG)
 
 
 
@@ -166,7 +166,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Loss.png)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss.png)
 
 
 
@@ -180,7 +180,7 @@ Self Driving Car Using Nvidia CNN Architecture<a name="TOP"></a>
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Simulator.gif)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Simulator.gif)
 
 
 **Video Showing Udacity Simualator Autonomous mode**
@@ -199,7 +199,7 @@ Trained the model with same architecture with grayscale images. Number of Epoch 
 
 
 **Graph of LOSS vs Number of Epochs.**
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Loss_for_grayscale_images.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Loss_for_grayscale_images.PNG)
 
 
 
@@ -218,7 +218,7 @@ Using Image processing and edge detection algorithms, tried to find the edges th
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Various_edge_detectors.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Various_edge_detectors.PNG)
 
 
 
@@ -250,7 +250,7 @@ The Canny edge detection algorithm is composed of 5 steps:
     
     
     
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Various_edge_detectors.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Various_edge_detectors.PNG)
 
 
 
@@ -263,7 +263,7 @@ The Canny edge detection algorithm is composed of 5 steps:
 
 
 
-![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media/Pixel_Values.PNG)
+![alt text](https://github.com/Laveen-exe/Self_Driving_Car_CNN/blob/main/media_files/Pixel_Values.PNG)
 
 - - - - 
 
